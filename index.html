@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boribuz - A Modern Expression of Bangladeshi Heritage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1a1a;
+            color: #f1f5f9; /* slate-100 */
+        }
+        h1, h2, h3, h4, h5, h6, .font-display {
+            font-family: 'Playfair Display', serif;
+        }
+        .text-brand-orange {
+            color: #E8751A;
+        }
+        .bg-brand-orange {
+            background-color: #E8751A;
+        }
+        .bg-brand-orange-hover:hover {
+            background-color: #d86c0f;
+        }
+        .border-brand-orange {
+            border-color: #E8751A;
+        }
+        .section-bg {
+            background-color: #262626;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header" class="bg-gray-900/80 backdrop-blur-md fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#" class="text-2xl font-display font-bold text-brand-orange">
+                    boribuz
+                </a>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#menu" class="text-slate-200 hover:text-brand-orange transition duration-300">Menu</a>
+                    <a href="#gallery" class="text-slate-200 hover:text-brand-orange transition duration-300">Gallery</a>
+                    <a href="#about" class="text-slate-200 hover:text-brand-orange transition duration-300">About</a>
+                    <a href="#contact" class="text-slate-200 hover:text-brand-orange transition duration-300">Contact</a>
+                </nav>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-slate-200 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4">
+                <a href="#menu" class="block py-2 text-slate-200 hover:text-brand-orange">Menu</a>
+                <a href="#gallery" class="block py-2 text-slate-200 hover:text-brand-orange">Gallery</a>
+                <a href="#about" class="block py-2 text-slate-200 hover:text-brand-orange">About</a>
+                <a href="#contact" class="block py-2 text-slate-200 hover:text-brand-orange">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="h-screen bg-cover bg-center flex items-center justify-center relative" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://e1.pxfuel.com/desktop-wallpaper/574/309/desktop-wallpaper-restaurant-menu-menu-thumbnail.jpg');">
+        <div class="text-center text-white p-4">
+            <h1 class="text-5xl md:text-7xl font-bold font-display leading-tight mb-4">A Modern Expression of <br class="hidden md:block"/> Bangladeshi Heritage</h1>
+            <p class="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl mx-auto">Savor the rich, authentic flavors of Bangladesh, crafted with passion and served with love.</p>
+            <a href="#menu" class="bg-brand-orange text-white font-bold py-3 px-8 rounded-lg text-lg bg-brand-orange-hover transition duration-300">View Our Menu</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-display font-bold mb-6">Welcome to Boribuz</h2>
+            <p class="max-w-3xl mx-auto text-slate-300 leading-relaxed">
+                Located in the heart of Scarborough, Boribuz is your destination for authentic Bangladeshi cuisine. Our name, a playful take on the Bengali word for "feast," reflects our commitment to bringing you a delightful dining experience. We use traditional recipes and the freshest ingredients to create dishes that are both familiar and exciting. Join us for a meal and become part of the Boribuz family.
+            </p>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="section-bg py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-display font-bold text-brand-orange">Our Menu</h2>
+                <p class="text-slate-300 mt-2">Carefully curated dishes made from family recipes.</p>
+            </div>
+            <div id="menu-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Menu items will be injected here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-display font-bold text-brand-orange">Glimpses of Boribuz</h2>
+                <p class="text-slate-300 mt-2">A feast for your eyes.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="group overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://placehold.co/600x600/222222/E8751A?text=Kacchi+Biryani" alt="A delicious plate of Kacchi Biryani" class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110">
+                </div>
+                <div class="group overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://placehold.co/600x600/222222/f1f5f9?text=Cozy+Ambiance" alt="The warm and cozy interior of the restaurant" class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110">
+                </div>
+                <div class="group overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://placehold.co/600x600/E8751A/1a1a1a?text=Rich+Curry" alt="A bowl of rich and flavorful curry" class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110">
+                </div>
+                <div class="group overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://placehold.co/600x600/222222/f1f5f9?text=Fresh+Shingara" alt="Freshly made Shingara" class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110">
+                </div>
+                <div class="group overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://placehold.co/600x600/E8751A/1a1a1a?text=Happy+Diners" alt="Happy customers dining at Boribuz" class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110">
+                </div>
+                <div class="group overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://placehold.co/600x600/222222/f1f5f9?text=Chicken+Roll" alt="A freshly prepared Chicken Roll" class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110">
+                </div>
+                <div class="group overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://placehold.co/600x600/222222/E8751A?text=Authentic+Spices" alt="A display of authentic spices used in the kitchen" class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110">
+                </div>
+                <div class="group overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://placehold.co/600x600/E8751A/1a1a1a?text=Sweet+Semai" alt="A bowl of traditional Semai dessert" class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-bg py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-display font-bold">Visit or Call Us</h2>
+                <p class="text-slate-300 mt-2">We'd love to hear from you!</p>
+            </div>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 bg-gray-900 p-8 rounded-lg shadow-lg">
+                <div class="text-center md:text-left">
+                    <h3 class="text-2xl font-display font-bold text-brand-orange mb-4">Contact Info</h3>
+                    <p class="text-lg mb-2">
+                        <span class="font-semibold">Address:</span> 3254 Danforth Ave, Scarborough, ON M1L 1C2
+                    </p>
+                    <p class="text-lg mb-4">
+                        <span class="font-semibold">Phone:</span> (647) 368-8301
+                    </p>
+                     <h3 class="text-2xl font-display font-bold text-brand-orange mb-4 mt-6">Hours</h3>
+                    <p class="text-lg">Monday - Sunday: 11:00 AM - 10:00 PM</p>
+                </div>
+                <div>
+                     <iframe 
+                        class="w-full h-80 rounded-lg border-2 border-gray-700"
+                        src="https://maps.google.com/maps?q=3254%20Danforth%20Ave,%20Scarborough,%20ON%20M1L%201C2&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                        frameborder="0" 
+                        scrolling="no" 
+                        marginheight="0" 
+                        marginwidth="0">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-6">
+        <div class="container mx-auto px-6 text-center text-slate-400">
+            <p>&copy; 2024 Boribuz. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- DATA FOR YOUR MENU ---
+        // You can easily change item names, descriptions, and prices here.
+        const menuData = {
+            "Main Courses": [
+                { name: "Kacchi Biryani", description: "Aromatic basmati rice with marinated goat, potatoes, and exotic spices.", price: "15.00" },
+                { name: "Beef Biryani", description: "Slow-cooked beef layered with fragrant saffron rice.", price: "9.99" },
+                { name: "Chicken Biryani", description: "Tender chicken marinated in yogurt and spices, cooked with basmati rice.", price: "7.99" },
+                { name: "Lamb/Goat Curry", description: "Rich and hearty curry with tender pieces of lamb or goat.", price: "14.00" },
+                { name: "Beef Curry", description: "A classic, flavorful beef curry cooked in a traditional onion-tomato gravy.", price: "9.99" },
+                { name: "Chicken Curry", description: "Homestyle chicken curry, tender and juicy in a spiced gravy.", price: "7.99" },
+                { name: "Rohu Fish Curry", description: "A staple Bengali fish curry, tangy and savory.", price: "6.99" },
+            ],
+            "Combos": [
+                 { name: "Beef Curry Combo", description: "Beef curry served with a side of rice and daal.", price: "11.99" },
+                 { name: "Chicken Curry Combo", description: "Our delicious chicken curry served with rice and daal.", price: "9.99" },
+                 { name: "Fish Curry Combo", description: "Rohu fish curry paired with steamed rice and daal.", price: "8.99" },
+            ],
+            "Snacks & Sides": [
+                { name: "Shingara", description: "Crispy pastry filled with spiced potatoes and vegetables.", price: "2.00" },
+                { name: "Chicken Roll", description: "Flaky paratha bread wrapped around a savory chicken filling.", price: "2.50" },
+                { name: "Peaju", description: "Crispy lentil fritters, perfect as a snack.", price: "0.50" },
+                { name: "Daal", description: "Comforting and flavorful lentil soup.", price: "3.00" },
+                { name: "Rice", description: "Fluffy, steamed basmati rice.", price: "3.00" },
+            ],
+            "Desserts & Drinks": [
+                { name: "Semai", description: "Sweet vermicelli pudding, a traditional festive dessert.", price: "3.00" },
+                { name: "Coke", description: "Classic Coca-Cola.", price: "2.00" },
+                { name: "Sprite", description: "Lemon-lime soda.", price: "2.00" },
+                { name: "Ginger Ale", description: "Crisp and refreshing.", price: "2.00" },
+                { name: "Water", description: "Bottled spring water.", price: "2.00" },
+            ]
+        };
+
+        // --- SCRIPT TO BUILD THE MENU ---
+        // This code reads the data above and creates the menu on the page.
+        function createMenu() {
+            const menuContainer = document.getElementById('menu-container');
+            if (!menuContainer) return;
+
+            let menuHTML = '';
+
+            for (const category in menuData) {
+                menuHTML += `
+                    <div class="col-span-1 md:col-span-2 lg:col-span-3">
+                        <h3 class="text-3xl font-display font-semibold mb-6 border-b-2 border-brand-orange pb-2">${category}</h3>
+                    </div>
+                `;
+                menuData[category].forEach(item => {
+                    menuHTML += `
+                        <div class="bg-gray-900 rounded-lg p-6 flex flex-col">
+                            <div class="flex-grow">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h4 class="text-xl font-semibold">${item.name}</h4>
+                                    <p class="text-xl font-semibold text-brand-orange ml-4">$${item.price}</p>
+                                </div>
+                                <p class="text-slate-400">${item.description}</p>
+                            </div>
+                        </div>
+                    `;
+                });
+            }
+            menuContainer.innerHTML = menuHTML;
+        }
+        
+        // --- MOBILE MENU TOGGLE ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+             // Close mobile menu when a link is clicked
+            mobileMenu.addEventListener('click', (event) => {
+                if (event.target.tagName === 'A') {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        }
+        
+        // Run functions when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            createMenu();
+        });
+    </script>
+</body>
+</html>
+
